@@ -1,158 +1,286 @@
-# ShopSpheric - Full Stack MERN E-Commerce Application
+# 🛒 ShopSpheric | Full Stack MERN E-Commerce Application
 
-ShopSpheric is a complete, production-ready, but beginner-friendly Full-Stack MERN (MongoDB, Express, React, Node.js) E-Commerce Web Application. It contains complete authentication, product management, cart and wishlist tracking, checkout order registration, and a responsive administrative dashboard.
-
-## 🛠️ Technology Stack
-
-* **Database:** MongoDB with Mongoose object modeling and schema validation
-* **Backend:** Node.js & Express.js REST APIs with structured MVC patterns
-* **Frontend:** React.js (Vite configuration), React Router (v6 SPA client routing)
-* **API Client:** Axios with auto-injection JWT request interceptors
-* **State Management:** React Context API (Auth, Cart, and Wishlist providers)
-* **Styling:** Vanilla CSS design system with custom property variables, layout flex/grids, and theme toggling
-* **Security:** JSON Web Tokens (JWT), bcrypt password hashing, CORS, and centralized exception handling
+ShopSpheric is a full-stack MERN (MongoDB, Express.js, React.js, Node.js) e-commerce web application that provides a complete online shopping experience. It features secure JWT authentication, product browsing, shopping cart, wishlist, order management, and an admin dashboard. The application is deployed using Vercel (Frontend), Render (Backend), and MongoDB Atlas (Database).
 
 ---
 
-## 📂 Project Folder Structure
+## 🌐 Live Demo
+
+**Frontend:** https://shopspheric-ecommerce-app-pearl.vercel.app
+
+**Backend API:** https://shopspheric-backend.onrender.com
+
+---
+
+## ✨ Features
+
+### 👤 Customer Features
+
+- User Registration & Login
+- Secure JWT Authentication
+- Browse Products
+- Search Products
+- Product Categories
+- Shopping Cart
+- Wishlist Management
+- Place Orders
+- Responsive User Interface
+- Dark & Light Theme Support
+
+### 🔑 Admin Features
+
+- Admin Authentication
+- Product Management
+- Category Management
+- Order Management
+- User Management
+
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+
+- React.js
+- Vite
+- React Router DOM
+- Axios
+- Context API
+- CSS3
+
+### Backend
+
+- Node.js
+- Express.js
+- MongoDB Atlas
+- Mongoose
+- JWT Authentication
+- bcrypt.js
+- CORS
+
+### Deployment
+
+- Vercel (Frontend)
+- Render (Backend)
+- MongoDB Atlas (Database)
+
+---
+
+## 📁 Project Structure
 
 ```
-my-first-project/
-├── package.json              # Workspace script runner orchestrating both servers
-├── README.md                 # Project guide and API specifications
-├── backend/
-│   ├── .env                  # Port, MongoDB URI, and JWT Secrets
-│   ├── server.js             # Express application initialization
-│   ├── config/
-│   │   └── db.js             # Mongoose MongoDB connection establishment
-│   ├── models/
-│   │   ├── User.js           # Users (Customer and Admin schema)
-│   │   ├── Product.js        # Products (Ratings, Reviews subdocuments)
-│   │   ├── Category.js       # Product Categories
-│   │   ├── Cart.js           # Shopping Cart items persistence
-│   │   ├── Wishlist.js       # Wishlist saved items
-│   │   └── Order.js          # Placed orders details
-│   ├── middleware/
-│   │   ├── auth.js           # JWT verification & admin role validators
-│   │   └── errorHandler.js   # Fallback 404 & Centralized exception formatters
-│   ├── controllers/
-│   │   ├── authController.js     # User registration, login, session checkers
-│   │   ├── productController.js  # Dynamic sorting, pagination, review CRUDs
-│   │   ├── categoryController.js # Category fetching & management
-│   │   ├── cartController.js     # Customer cart increments & syncs
-│   │   ├── wishlistController.js # Wishlist toggles
-│   │   ├── orderController.js    # Order placing, stock deductions, status updates
-│   │   └── userController.js     # User profile and security changes
-│   ├── routes/
-│   │   └── [domain]Routes.js # Express router maps
-│   └── data/
-│       ├── dummyData.js      # Seeding dataset definition
-│       └── seeder.js         # Wipe & Seed script runner
-└── frontend/
-    ├── package.json          # React Vite configurations & dependencies
-    ├── vite.config.js        # Vite configurations (Reverse proxy for API requests)
-    ├── index.html            # Main HTML skeleton containing Google Fonts
-    └── src/
-        ├── main.jsx          # DOM rendering entry point
-        ├── App.jsx           # App layout, routing bindings, and guards
-        ├── index.css         # Modern styling rules and dark mode variables
-        ├── utils/
-        │   └── api.js        # Axios instance configured with JWT interceptors
-        ├── context/
-        │   ├── AuthContext.jsx  # Active user, profile changes, dark mode
-        │   ├── CartContext.jsx  # Cart increments, tax/shipping math
-        │   └── WishlistContext.jsx # Saved wishlist listings
-        ├── components/       # Custom reusable layouts (Navbar, Card, Sidebar, Loader, Toast, Modal)
-        └── pages/            # View pages (Home, Catalogue, Details, Admin Dashboard, checkout)
+my-first-project
+│
+├── backend
+│   ├── config
+│   ├── controllers
+│   ├── middleware
+│   ├── models
+│   ├── routes
+│   ├── data
+│   ├── server.js
+│   └── .env
+│
+├── frontend
+│   ├── src
+│   │   ├── components
+│   │   ├── context
+│   │   ├── pages
+│   │   ├── utils
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   ├── vite.config.js
+│   └── package.json
+│
+├── package.json
+└── README.md
 ```
 
 ---
 
-## ⚡ Setup & Installation
+## 🚀 Installation
 
-### Prerequisites
-Make sure you have [Node.js](https://nodejs.org/) installed and [MongoDB](https://www.mongodb.com/) running locally on your computer.
+### 1. Clone the Repository
 
-### Step 1: Install Dependencies
-Run the install command from the root directory to install the workspace orchestration packages and trigger sub-folder setups:
+```bash
+git clone https://github.com/deveshsahu912/shopspheric-ecommerce-app.git
+
+cd shopspheric-ecommerce-app
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+or
+
 ```bash
 npm run install-all
 ```
-This command installs packages concurrently for the Workspace Root, `/backend`, and `/frontend`.
 
-### Step 2: Seed the Database
-Seed MongoDB with sample categories, users, and products (20 items, 5 categories, 1 admin, 5 normal users):
-```bash
-npm run seed
+---
+
+## ⚙ Environment Variables
+
+Create a `.env` file inside the **backend** folder.
+
+```env
+PORT=5000
+
+MONGO_URI=your_mongodb_connection_string
+
+JWT_SECRET=your_secret_key
+
+NODE_ENV=development
 ```
-This runs the database seeder script `backend/data/seeder.js` to wipe existing collections and import the dummy datasets.
 
-### Step 3: Run the Application
-Start the concurrent development runner:
+---
+
+## ▶ Running the Application
+
+Start both frontend and backend:
+
 ```bash
 npm run dev
 ```
-* **Frontend client** launches at: `http://localhost:5173/`
-* **Backend API** launches at: `http://localhost:5000/`
+
+Frontend
+
+```
+http://localhost:5173
+```
+
+Backend
+
+```
+http://localhost:5000
+```
 
 ---
 
-## 🛡️ Default Seed Credentials
+## 👥 Demo Credentials
 
-Use these credentials to evaluate user roles:
-* **Administrator Profile:**
-  * **Email:** `admin@example.com`
-  * **Password:** `adminpassword123`
-* **Standard Customer Profile:**
-  * **Email:** `john@example.com`
-  * **Password:** `userpassword123`
+### Administrator
+
+**Email**
+
+```
+admin@example.com
+```
+
+**Password**
+
+```
+adminpassword123
+```
+
+### Customer
+
+**Email**
+
+```
+john@example.com
+```
+
+**Password**
+
+```
+userpassword123
+```
 
 ---
 
-## 🛰️ REST API Documentation
+## 📡 REST API Endpoints
 
-### 🔑 Authentication Routes
-* `POST /api/auth/register` - Create new customer account.
-* `POST /api/auth/login` - Validate credentials, sign JWT token.
-* `POST /api/auth/logout` - Clear user session.
-* `GET /api/auth/me` - Fetch profile of logged-in user (*Requires Authentication Header*).
+### Authentication
 
-### 🏷️ Category Routes
-* `GET /api/categories` - Fetch all categories.
-* `GET /api/categories/:id` - Fetch single category details.
-* `POST /api/categories` - Create new category (*Requires Admin*).
-* `PUT /api/categories/:id` - Update category details (*Requires Admin*).
-* `DELETE /api/categories/:id` - Delete category (*Requires Admin*).
+```
+POST /api/auth/register
+POST /api/auth/login
+GET  /api/auth/me
+```
 
-### 📦 Product Routes
-* `GET /api/products` - Get products (Supports page number query, search keyword, category sorting).
-* `GET /api/products/:id` - Get product specifications and related items.
-* `POST /api/products` - Create catalog item (*Requires Admin*).
-* `PUT /api/products/:id` - Update product data (*Requires Admin*).
-* `DELETE /api/products/:id` - Delete item (*Requires Admin*).
-* `POST /api/products/:id/reviews` - Add review and star ratings (*Requires Auth*).
+### Products
 
-### 🛒 Cart Routes (*All Require Authentication*)
-* `GET /api/cart` - Fetch user's cart.
-* `POST /api/cart` - Add/Increment item in cart.
-* `PUT /api/cart/:productId` - Modify quantity of cart item.
-* `DELETE /api/cart/:productId` - Remove item from cart.
+```
+GET    /api/products
+GET    /api/products/:id
+POST   /api/products
+PUT    /api/products/:id
+DELETE /api/products/:id
+```
 
-### 💖 Wishlist Routes (*All Require Authentication*)
-* `GET /api/wishlist` - Get wishlist items.
-* `POST /api/wishlist` - Toggle product save state.
-* `DELETE /api/wishlist/:productId` - Remove product from saved list.
+### Categories
 
-### 📝 Order Routes (*All Require Authentication*)
-* `POST /api/orders` - Place order (COD default, reduces stock, clears cart).
-* `GET /api/orders/myorders` - List current customer's order history.
-* `GET /api/orders/:id` - Get invoice details (*Access permitted to owner and admins*).
-* `GET /api/orders` - Fetch all system orders (*Requires Admin*).
-* `PUT /api/orders/:id/status` - Modify shipping status (*Requires Admin*).
+```
+GET /api/categories
+```
 
-### 👤 User Routes (*All Require Authentication*)
-* `PUT /api/users/profile` - Update profile name, email, phone, and address.
-* `PUT /api/users/password` - Validate current password and set new password.
-* `GET /api/users` - Fetch users directory (*Requires Admin*).
-* `DELETE /api/users/:id` - Delete user account (*Requires Admin*).
-* `PUT /api/users/:id/role` - Toggle User / Admin role privileges (*Requires Admin*).
+### Cart
+
+```
+GET    /api/cart
+POST   /api/cart
+PUT    /api/cart/:id
+DELETE /api/cart/:id
+```
+
+### Wishlist
+
+```
+GET    /api/wishlist
+POST   /api/wishlist
+DELETE /api/wishlist/:id
+```
+
+### Orders
+
+```
+POST /api/orders
+GET  /api/orders
+```
+
+---
+
+## 📸 Screenshots
+
+Add screenshots of the following pages:
+
+- Home Page
+- Login Page
+- Product Details
+- Shopping Cart
+- Wishlist
+- Admin Dashboard
+
+---
+
+## 🎯 Future Enhancements
+
+- Online Payment Integration (Razorpay/Stripe)
+- Email Verification
+- Forgot Password
+- Product Recommendations
+- Order Tracking
+- Product Image Upload
+- Sales Analytics Dashboard
+- Coupon & Discount System
+- Product Reviews & Ratings
+
+---
+
+## 👨‍💻 Author
+
+**Devesh Kumar Sahu**
+
+GitHub: https://github.com/deveshsahu912
+
+LinkedIn: *(Add your LinkedIn Profile URL)*
+
+---
+
+## 📄 License
+
+This project is developed for learning purposes and portfolio demonstration.
