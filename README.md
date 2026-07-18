@@ -283,9 +283,8 @@ GET  /api/orders
 
 **Devesh Kumar Sahu**
 
-GitHub: https://github.com/deveshsahu912
-
-LinkedIn: *(Add your LinkedIn Profile URL)*
+- **GitHub:** [deveshsahu912](https://github.com/deveshsahu912)
+- **LinkedIn:** [Devesh Kumar Sahu](https://www.linkedin.com/in/devesh-sahu-3530ab245/)
 
 ---
 
