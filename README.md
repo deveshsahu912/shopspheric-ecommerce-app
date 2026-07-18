@@ -242,6 +242,29 @@ POST /api/orders
 GET  /api/orders
 ```
 
+---
+
+## 📸 Screenshots
+
+### Home Page
+![Home Page](screenshots/home.png)
+
+### Login Page
+![Login Page](screenshots/login.png)
+
+### Products Page
+![Products Page](screenshots/products.png)
+
+### Shopping Cart
+![Shopping Cart](screenshots/cart.png)
+
+### Wishlist
+![Wishlist](screenshots/wishlist.png)
+
+### Admin Dashboard
+![Admin Dashboard](screenshots/admin-dashboard.png)
+---
+
 ## 🎯 Future Enhancements
 
 - Online Payment Integration (Razorpay/Stripe)
