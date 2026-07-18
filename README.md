@@ -242,21 +242,6 @@ POST /api/orders
 GET  /api/orders
 ```
 
----
-
-## 📸 Screenshots
-
-Add screenshots of the following pages:
-
-- Home Page
-- Login Page
-- Product Details
-- Shopping Cart
-- Wishlist
-- Admin Dashboard
-
----
-
 ## 🎯 Future Enhancements
 
 - Online Payment Integration (Razorpay/Stripe)
